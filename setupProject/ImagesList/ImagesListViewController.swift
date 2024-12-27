@@ -4,23 +4,17 @@
 //
 //  Created by Yanye Velikanova on 12/20/24.
 //
-
 import UIKit
+import Foundation
 
 
 final class ImagesListViewController: UIViewController {
-    @IBOutlet var tableView: UITableView!
-    
-    
+    @IBOutlet private var tableView: UITableView!
+
     override func viewDidLoad() {
-        
-        tableView.register(
-            ImagesListCell.self,
-            forCellReuseIdentifier: ImagesListCell.reuseIdentifier
-        )
-        tableView.rowHeight = 200
-        
         super.viewDidLoad()
+
+        tableView.rowHeight = 200
     }
 }
 
