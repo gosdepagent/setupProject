@@ -25,6 +25,7 @@ final class ImagesListViewController: UIViewController {
         //    ImagesListCell.self,
         //    forCellReuseIdentifier: ImagesListCell.reuseIdentifier
       //  )
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 200
