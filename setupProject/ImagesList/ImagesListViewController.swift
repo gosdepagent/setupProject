@@ -21,17 +21,20 @@ final class ImagesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       // tableView.register(
-        //    ImagesListCell.self,
-        //    forCellReuseIdentifier: ImagesListCell.reuseIdentifier
-      //  )
+    //    tableView.register(
+     //       ImagesListCell.self,
+     //       forCellReuseIdentifier: ImagesListCell.reuseIdentifier
+   //     )
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 200
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
+        tableView.rowHeight = UITableView.automaticDimension
     }
 }
+
+
 
 extension ImagesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

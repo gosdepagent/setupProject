@@ -38,22 +38,31 @@
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqz-5V-NcL">
-                                                    <rect key="frame" x="11" y="176" width="171" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfl-Pu-SEa">
-                                                    <rect key="frame" x="320" y="4" width="54" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfl-Pu-SEa">
+                                                    <rect key="frame" x="349" y="-7" width="44" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="GfN-qT-zyS"/>
+                                                        <constraint firstAttribute="width" constant="44" id="Kxa-6r-KeO"/>
+                                                    </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="No Active 1">
                                                         <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqz-5V-NcL">
+                                                    <rect key="frame" x="8" y="196.33333333333334" width="393" height="15.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Mqz-5V-NcL" firstAttribute="leading" secondItem="MHP-D5-hhx" secondAttribute="leading" constant="8" id="5ol-bM-ajj"/>
+                                                <constraint firstItem="Mqz-5V-NcL" firstAttribute="bottom" secondItem="MHP-D5-hhx" secondAttribute="bottom" constant="8" id="Iz6-MB-5Pd"/>
+                                                <constraint firstItem="yfl-Pu-SEa" firstAttribute="trailing" secondItem="MHP-D5-hhx" secondAttribute="trailing" id="KTA-Sa-1wa"/>
+                                                <constraint firstItem="yfl-Pu-SEa" firstAttribute="top" secondItem="MHP-D5-hhx" secondAttribute="top" id="dXF-y7-PO8"/>
+                                                <constraint firstItem="Mqz-5V-NcL" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MHP-D5-hhx" secondAttribute="trailing" constant="8" id="iD7-sr-pOu"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellImage" destination="MHP-D5-hhx" id="HG0-8W-dPS"/>
