@@ -20,52 +20,60 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vfd-z3-jnz">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" name="YP Black"/>
+                                <color key="sectionIndexBackgroundColor" name="YP Black"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="200" id="W3x-sD-Ywd" customClass="ImagesListCell" customModule="setupProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="393" height="200"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="224" id="W3x-sD-Ywd" customClass="ImagesListCell" customModule="setupProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="224"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W3x-sD-Ywd" id="w9l-Tr-Roz">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="224"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" id="MHP-D5-hhx">
-                                                    <rect key="frame" x="0.0" y="-7" width="393" height="211"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-0Q-Yfe">
+                                                    <rect key="frame" x="16" y="4" width="361" height="216"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                                    </accessibility>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="16"/>
+                                                            <integer key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqz-5V-NcL">
+                                                    <rect key="frame" x="24" y="196" width="121.66666666666666" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfl-Pu-SEa">
-                                                    <rect key="frame" x="349" y="-7" width="44" height="44"/>
+                                                    <rect key="frame" x="354" y="4" width="44" height="44"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="44" id="GfN-qT-zyS"/>
-                                                        <constraint firstAttribute="width" constant="44" id="Kxa-6r-KeO"/>
+                                                        <constraint firstAttribute="height" constant="44" id="IF0-uT-8I9"/>
+                                                        <constraint firstAttribute="width" constant="44" id="R53-Ct-maR"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="No Active 1">
                                                         <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </buttonConfiguration>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqz-5V-NcL">
-                                                    <rect key="frame" x="8" y="196.33333333333334" width="393" height="15.666666666666657"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Mqz-5V-NcL" firstAttribute="leading" secondItem="MHP-D5-hhx" secondAttribute="leading" constant="8" id="5ol-bM-ajj"/>
-                                                <constraint firstItem="Mqz-5V-NcL" firstAttribute="bottom" secondItem="MHP-D5-hhx" secondAttribute="bottom" constant="8" id="Iz6-MB-5Pd"/>
-                                                <constraint firstItem="yfl-Pu-SEa" firstAttribute="trailing" secondItem="MHP-D5-hhx" secondAttribute="trailing" id="KTA-Sa-1wa"/>
-                                                <constraint firstItem="yfl-Pu-SEa" firstAttribute="top" secondItem="MHP-D5-hhx" secondAttribute="top" id="dXF-y7-PO8"/>
-                                                <constraint firstItem="Mqz-5V-NcL" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MHP-D5-hhx" secondAttribute="trailing" constant="8" id="iD7-sr-pOu"/>
+                                                <constraint firstItem="Mqz-5V-NcL" firstAttribute="bottom" secondItem="TQM-0Q-Yfe" secondAttribute="bottom" constant="-8" id="9nf-RC-HnQ"/>
+                                                <constraint firstItem="TQM-0Q-Yfe" firstAttribute="top" secondItem="w9l-Tr-Roz" secondAttribute="top" constant="4" id="FRs-2x-JSW"/>
+                                                <constraint firstItem="Mqz-5V-NcL" firstAttribute="leading" secondItem="TQM-0Q-Yfe" secondAttribute="leading" constant="8" id="J2D-sY-OYV"/>
+                                                <constraint firstItem="yfl-Pu-SEa" firstAttribute="top" secondItem="TQM-0Q-Yfe" secondAttribute="top" id="TCw-bK-lcz"/>
+                                                <constraint firstAttribute="bottom" secondItem="TQM-0Q-Yfe" secondAttribute="bottom" constant="4" id="UjE-Cz-4yW"/>
+                                                <constraint firstItem="Mqz-5V-NcL" firstAttribute="trailing" secondItem="TQM-0Q-Yfe" secondAttribute="trailing" constant="-231.33333333333334" id="biY-H0-WOt"/>
+                                                <constraint firstItem="yfl-Pu-SEa" firstAttribute="trailing" secondItem="TQM-0Q-Yfe" secondAttribute="trailing" constant="21" id="hdh-2A-9i7"/>
+                                                <constraint firstAttribute="trailing" secondItem="TQM-0Q-Yfe" secondAttribute="trailing" constant="16" id="q8c-gu-BWN"/>
+                                                <constraint firstItem="TQM-0Q-Yfe" firstAttribute="leading" secondItem="w9l-Tr-Roz" secondAttribute="leading" constant="16" id="rsN-oE-UXp"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="YP Black"/>
                                         <connections>
-                                            <outlet property="cellImage" destination="MHP-D5-hhx" id="HG0-8W-dPS"/>
+                                            <outlet property="cellImage" destination="TQM-0Q-Yfe" id="QeX-AX-VZY"/>
                                             <outlet property="dateLabel" destination="Mqz-5V-NcL" id="u9z-33-UmJ"/>
                                             <outlet property="likeButton" destination="yfl-Pu-SEa" id="dwY-5R-fCc"/>
                                         </connections>
