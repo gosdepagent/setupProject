@@ -18,6 +18,14 @@ final class ImagesListViewController: UIViewController {
         return formatter
     }()
     
+    private let tabBar: UITabBar = {
+           let tabBar = UITabBar()
+           let homeItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
+           let settingsItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 1)
+           tabBar.items = [homeItem, settingsItem]
+           return tabBar
+       }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +39,7 @@ final class ImagesListViewController: UIViewController {
         tableView.rowHeight = 200
         tableView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 12, right: 0)
         tableView.rowHeight = UITableView.automaticDimension
+        
     }
 }
 
@@ -85,3 +94,4 @@ extension ImagesListViewController: UITableViewDelegate {
         return cellHeight
     }
 }
+
