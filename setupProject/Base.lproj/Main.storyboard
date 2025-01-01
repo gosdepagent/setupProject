@@ -8,6 +8,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFPRODISPLAYBOLD.OTF">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SFPRODISPLAYREGULAR.OTF">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--ImageList-->
         <scene sceneID="tne-QT-ifu">
@@ -22,7 +30,7 @@
                                 <color key="backgroundColor" name="YP Black"/>
                                 <color key="sectionIndexBackgroundColor" name="YP Black"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="224" id="W3x-sD-Ywd" customClass="ImagesListCell" customModule="setupProject" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImagesListCell" rowHeight="224" id="W3x-sD-Ywd" customClass="ImagesListCell" customModule="setupProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="224"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W3x-sD-Ywd" id="w9l-Tr-Roz">
@@ -101,10 +109,87 @@
             </objects>
             <point key="canvasLocation" x="40.458015267175568" y="-34.507042253521128"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="6rU-F5-Q3j">
+            <objects>
+                <viewController id="ei9-fO-3I5" customClass="ProfileViewController" customModule="setupProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JaC-hG-WKq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="BV1-lp-IzX">
+                                <rect key="frame" x="16" y="91" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="jQa-5i-RYS"/>
+                                    <constraint firstAttribute="width" constant="70" id="jYx-X4-ml8"/>
+                                    <constraint firstAttribute="width" secondItem="BV1-lp-IzX" secondAttribute="height" multiplier="1:1" id="peX-Yn-uXl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@ekaterina_nov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aje-Rc-tG1" userLabel="Nickname">
+                                <rect key="frame" x="16" y="199" width="99" height="16"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="13"/>
+                                <color key="textColor" name="Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, world!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcs-23-yMg">
+                                <rect key="frame" x="16" y="221" width="77" height="16"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy0-HE-cyn">
+                                <rect key="frame" x="327" y="114" width="24" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Exit"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Екатерина Новикова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxu-ZQ-uxy">
+                                <rect key="frame" x="16" y="169" width="235" height="27.666666666666657"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CCB-pm-XL5"/>
+                        <color key="backgroundColor" name="YP Black"/>
+                        <constraints>
+                            <constraint firstItem="BV1-lp-IzX" firstAttribute="top" secondItem="CCB-pm-XL5" secondAttribute="top" constant="32" id="5Mv-oS-dLi"/>
+                            <constraint firstItem="Aje-Rc-tG1" firstAttribute="leading" secondItem="CCB-pm-XL5" secondAttribute="leading" constant="16" id="DY1-i6-Hkv"/>
+                            <constraint firstItem="CCB-pm-XL5" firstAttribute="trailing" secondItem="BV1-lp-IzX" secondAttribute="trailing" constant="289" id="Igq-20-bXX"/>
+                            <constraint firstItem="qcs-23-yMg" firstAttribute="top" secondItem="CCB-pm-XL5" secondAttribute="top" constant="162" id="MfY-hD-zsV"/>
+                            <constraint firstItem="CCB-pm-XL5" firstAttribute="trailing" secondItem="Jxu-ZQ-uxy" secondAttribute="trailing" constant="124" id="UXC-lh-oqK"/>
+                            <constraint firstItem="BV1-lp-IzX" firstAttribute="leading" secondItem="CCB-pm-XL5" secondAttribute="leading" constant="16" id="cLi-2W-yb7"/>
+                            <constraint firstItem="Jxu-ZQ-uxy" firstAttribute="top" secondItem="CCB-pm-XL5" secondAttribute="top" constant="110" id="enn-1L-lwE"/>
+                            <constraint firstItem="Xy0-HE-cyn" firstAttribute="leading" secondItem="CCB-pm-XL5" secondAttribute="leading" constant="327" id="heT-5b-yNO"/>
+                            <constraint firstItem="CCB-pm-XL5" firstAttribute="trailing" secondItem="Xy0-HE-cyn" secondAttribute="trailing" constant="24" id="kGy-II-6sl"/>
+                            <constraint firstItem="CCB-pm-XL5" firstAttribute="trailing" secondItem="Aje-Rc-tG1" secondAttribute="trailing" constant="260" id="keB-DO-kLb"/>
+                            <constraint firstItem="Xy0-HE-cyn" firstAttribute="top" secondItem="CCB-pm-XL5" secondAttribute="top" constant="55" id="m4h-GB-NjQ"/>
+                            <constraint firstItem="qcs-23-yMg" firstAttribute="leading" secondItem="CCB-pm-XL5" secondAttribute="leading" constant="16" id="qf7-Or-uWP"/>
+                            <constraint firstItem="Jxu-ZQ-uxy" firstAttribute="leading" secondItem="CCB-pm-XL5" secondAttribute="leading" constant="16" id="vyB-lc-dHa"/>
+                            <constraint firstItem="CCB-pm-XL5" firstAttribute="trailing" secondItem="qcs-23-yMg" secondAttribute="trailing" constant="282" id="vzO-Eh-7xd"/>
+                            <constraint firstItem="Aje-Rc-tG1" firstAttribute="top" secondItem="Jxu-ZQ-uxy" secondAttribute="top" constant="30" id="zl7-Zr-yUV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Exit" destination="Xy0-HE-cyn" id="sqf-YI-7dU"/>
+                        <outlet property="Login" destination="Aje-Rc-tG1" id="upf-1S-Ny1"/>
+                        <outlet property="Name" destination="Jxu-ZQ-uxy" id="XZ2-st-lds"/>
+                        <outlet property="Picture" destination="BV1-lp-IzX" id="eTi-fE-OSL"/>
+                        <outlet property="Text" destination="qcs-23-yMg" id="Lu9-8y-jHa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="isF-Qy-bzm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974.80916030534343" y="-28.169014084507044"/>
+        </scene>
     </scenes>
     <resources>
         <image name="0" width="1600" height="1059"/>
+        <image name="Exit" width="24" height="24"/>
         <image name="No Active 1" width="30" height="26"/>
+        <image name="Photo" width="70" height="70"/>
+        <namedColor name="Color">
+            <color red="0.68235294117647061" green="0.68627450980392157" blue="0.70588235294117652" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="YP Black">
             <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
