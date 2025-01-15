@@ -8,7 +8,7 @@ import UIKit
 
 final class ImagesListViewController: UIViewController {
     @IBOutlet private var tableView: UITableView!
-
+    
     private let photosName: [String] = Array(0..<20).map{ "\($0)" }
     
     private lazy var dateFormatter: DateFormatter = {
@@ -19,20 +19,15 @@ final class ImagesListViewController: UIViewController {
     }()
     
     private let tabBar: UITabBar = {
-           let tabBar = UITabBar()
-           let homeItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
-           let settingsItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 1)
-           tabBar.items = [homeItem, settingsItem]
-           return tabBar
-       }()
+        let tabBar = UITabBar()
+        let homeItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 0)
+        let settingsItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gear"), tag: 1)
+        tabBar.items = [homeItem, settingsItem]
+        return tabBar
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    //    tableView.register(
-     //       ImagesListCell.self,
-     //       forCellReuseIdentifier: ImagesListCell.reuseIdentifier
-   //     )
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -41,7 +36,34 @@ final class ImagesListViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         
     }
-}
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowSingleImage" {
+            guard
+                let viewController = segue.destination as? SingleImageViewController,
+                let indexPath = sender as? IndexPath
+            else {
+                assertionFailure("Invalid segue destination")
+                return
+            }
+
+            let image = UIImage(named: photosName[indexPath.row])
+            _ = viewController.view // CRASH FIXED !?
+            viewController.imageView.image = image
+        } else {
+            super.prepare(for: segue, sender: sender)
+        }
+    }
+    }
+
+
+
+extension SingleImageViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ShowSingleImage", sender: indexPath)
+    }
+    }
+
 
 
 
