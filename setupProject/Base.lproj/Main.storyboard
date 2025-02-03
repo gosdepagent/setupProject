@@ -123,12 +123,23 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="nrb-in-tdl">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Huv-BJ-oTp">
+                                <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="NxG-S1-dcy"/>
+                                    <constraint firstAttribute="height" constant="48" id="b5h-bo-ZMJ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Backward"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SuJ-b6-kAu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nrb-in-tdl" firstAttribute="leading" secondItem="K9L-qp-PbP" secondAttribute="leading" id="7Is-Ab-mFZ"/>
                             <constraint firstItem="nrb-in-tdl" firstAttribute="top" secondItem="SuJ-b6-kAu" secondAttribute="top" id="8Ds-l2-IC7"/>
+                            <constraint firstItem="Huv-BJ-oTp" firstAttribute="leading" secondItem="SuJ-b6-kAu" secondAttribute="leading" constant="8" id="OQn-eS-v1X"/>
+                            <constraint firstItem="Huv-BJ-oTp" firstAttribute="top" secondItem="SuJ-b6-kAu" secondAttribute="top" constant="8" id="SMc-AM-lfi"/>
                             <constraint firstItem="nrb-in-tdl" firstAttribute="trailing" secondItem="K9L-qp-PbP" secondAttribute="trailingMargin" constant="16" id="etj-nZ-Xyv"/>
                             <constraint firstAttribute="bottomMargin" secondItem="nrb-in-tdl" secondAttribute="bottom" id="kCK-xx-o4D"/>
                         </constraints>
@@ -264,6 +275,7 @@
     </scenes>
     <resources>
         <image name="0" width="1600" height="1059"/>
+        <image name="Backward" width="24" height="24"/>
         <image name="Exit" width="24" height="24"/>
         <image name="No Active 1" width="30" height="26"/>
         <image name="Photo" width="70" height="70"/>
