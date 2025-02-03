@@ -105,7 +105,7 @@
                     <navigationItem key="navigationItem" id="32x-rz-Zpd"/>
                     <connections>
                         <outlet property="tableView" destination="Vfd-z3-jnz" id="L5w-PN-hHx"/>
-                        <segue destination="SCk-2P-gTw" kind="show" identifier="ShowSingleImage" id="eca-kM-bAw"/>
+                        <segue destination="SCk-2P-gTw" kind="presentation" identifier="ShowSingleImage" id="heU-EO-r2S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -115,25 +115,28 @@
         <!--Single Image View Controller-->
         <scene sceneID="ukr-aS-coE">
             <objects>
-                <viewController id="SCk-2P-gTw" customClass="SingleImageViewController" customModule="setupProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="SCk-2P-gTw" customClass="SingleImageViewController" customModule="setupProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K9L-qp-PbP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="nrb-in-tdl">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SuJ-b6-kAu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nrb-in-tdl" firstAttribute="leading" secondItem="SuJ-b6-kAu" secondAttribute="leading" id="7Is-Ab-mFZ"/>
-                            <constraint firstItem="nrb-in-tdl" firstAttribute="top" secondItem="K9L-qp-PbP" secondAttribute="topMargin" id="8Ds-l2-IC7"/>
-                            <constraint firstItem="nrb-in-tdl" firstAttribute="trailing" secondItem="SuJ-b6-kAu" secondAttribute="trailing" id="etj-nZ-Xyv"/>
+                            <constraint firstItem="nrb-in-tdl" firstAttribute="leading" secondItem="K9L-qp-PbP" secondAttribute="leading" id="7Is-Ab-mFZ"/>
+                            <constraint firstItem="nrb-in-tdl" firstAttribute="top" secondItem="SuJ-b6-kAu" secondAttribute="top" id="8Ds-l2-IC7"/>
+                            <constraint firstItem="nrb-in-tdl" firstAttribute="trailing" secondItem="K9L-qp-PbP" secondAttribute="trailingMargin" constant="16" id="etj-nZ-Xyv"/>
                             <constraint firstAttribute="bottomMargin" secondItem="nrb-in-tdl" secondAttribute="bottom" id="kCK-xx-o4D"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IxW-IU-6BR"/>
+                    <connections>
+                        <outlet property="imageView" destination="nrb-in-tdl" id="d9t-HX-l3F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDE-Kk-f4X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
